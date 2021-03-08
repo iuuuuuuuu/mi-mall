@@ -5,13 +5,13 @@ import Index from './pages/index'
 Vue.use(Router);
 
 export default new Router({
-  routes:[
+  routes: [
     {
-      path:'/',
-      name:'home',
-      component:Home,
-      redirect:'/index',
-      children:[
+      path: '/',
+      name: 'home',
+      component: Home,
+      redirect: '/index',
+      children: [
         {
           path: '/index',
           name: 'index',
@@ -35,13 +35,13 @@ export default new Router({
     {
       path: '/cart',
       name: 'cart',
-      component: () => import('./pages/cart.vue')
+      component: () => import('./pages/Cart.vue')
     },
     {
       path: '/order',
       name: 'order',
-      component: () => import('./pages/order.vue'),
-      children:[
+      component: () => import('./pages/Order.vue'),
+      children: [
         {
           path: 'list',
           name: 'order-list',
